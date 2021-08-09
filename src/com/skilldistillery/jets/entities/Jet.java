@@ -19,10 +19,6 @@ public abstract class Jet {
 		this.price = price;
 	}
 	
-	public double calculateRange() {
-		return 0.0;
-	}
-
 	public String getModel() {
 		return model;
 	}
@@ -58,6 +54,11 @@ public abstract class Jet {
 	@Override
 	public String toString() {
 		return "Model:" + model + ", Speed:" + speed + ", Range:" + range + ", Price:" + price;
+	}
+	
+	public double getFlightTime() {
+		double fTime = range/speed;
+		return fTime;
 	}
 	
 	public void fly() {
