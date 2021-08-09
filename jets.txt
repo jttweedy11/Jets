@@ -1,3 +1,5 @@
 cargo, boeing 747, 614, 9500, 600000
 fighter, F-22 Raptor, 614, 9500, 500000
 harrier, Hawker Siddeley Harrier, 730, 1155, 300000
+jet, puddle jumper, 230, 730, 320000
+fighter, F-15 Eagle, 1875, 2992, 46730
