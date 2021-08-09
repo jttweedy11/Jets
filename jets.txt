@@ -1,0 +1,3 @@
+cargo, boeing 747, 614, 9500, 600000
+fighter, F-22 Raptor, 614, 9500, 500000
+harrier, Hawker Siddeley Harrier, 730, 1155, 300000
