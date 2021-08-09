@@ -65,5 +65,6 @@ public abstract class Jet {
 		double fTime = range/speed;
 		System.out.println("Model:" + model + ", Speed:" + speed + ", Range:" + range + ", Price:" + price + ", Flight Time: " + fTime);
 	}
+
 	
 }
