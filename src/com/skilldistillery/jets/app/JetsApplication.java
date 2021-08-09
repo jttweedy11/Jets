@@ -2,8 +2,10 @@ package com.skilldistillery.jets.app;
 
 
 import com.skilldistillery.jets.entities.AirField;
+import com.skilldistillery.jets.entities.Combat;
 import com.skilldistillery.jets.entities.Jet;
 import com.skilldistillery.jets.entities.JetImp;
+import com.skilldistillery.jets.entities.LoadCargo;
 
 import java.util.List;
 import java.util.InputMismatchException;
@@ -46,12 +48,18 @@ public class JetsApplication {
 			longestFlightTime();
 		}
 		else if(userOption == 5) {
-			addJet();
+			loadCargo();
 		}
 		else if(userOption == 6) {
-			removeJet();
+			fight();
 		}
 		else if(userOption == 7) {
+			addJet();
+		}
+		else if(userOption == 8) {
+			removeJet();
+		}
+		else if(userOption == 9) {
 			quit();
 		}
 		else
@@ -68,9 +76,11 @@ public class JetsApplication {
 		System.out.println("2. 		Fly all jets							");
 		System.out.println("3. 		View fastest jet						");
 		System.out.println("4. 		View jet with longest flight time		");
-		System.out.println("5. 		Add a jet to Fleet						");
-		System.out.println("6. 		Remove a jet from Fleet					");
-		System.out.println("7. 		Quit									");
+		System.out.println("5. 		Load Cargo Jets							");
+		System.out.println("6. 		Dogfight!								");
+		System.out.println("7. 		Add a jet to Fleet						");
+		System.out.println("8. 		Remove a jet from Fleet					");
+		System.out.println("9. 		Quit									");
 		int uSelection = input.nextInt();
 		return uSelection;
 	}
@@ -156,6 +166,22 @@ public class JetsApplication {
 		input.close();
 		System.out.println("Sorry to see you go. Have a good day!");
 	}
+	private void loadCargo() {
+		for (Jet jet : arf.getJets()) {
+			if(jet instanceof LoadCargo) {
+				((LoadCargo) jet).loadCargo();
+			}
+		}
+	}
+	
+	private void fight() {
+		for (Jet jet : arf.getJets()) {
+			if(jet instanceof Combat) {
+				((Combat) jet).fight();
+			}
+		}
+	}
+		
 	}
 ////		CargoPlane c = new CargoPlane("boeing 747", 614, 8300, 50000);
 //		FighterJet f = new FighterJet("F-22 Raptor", 1500, 1839, 60000);

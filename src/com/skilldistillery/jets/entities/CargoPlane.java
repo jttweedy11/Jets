@@ -5,15 +5,5 @@ public class CargoPlane extends Jet {
 		super(model, speed, range, price);
 	}
 
-	@Override
-	public double calculateRange() {
-		// TODO Auto-generated method stub
-		double speed = super.getSpeed();
-		double range = super.getRange();
-		double result = 0.0;
-		
-		result = range/speed;
-		return result;
-	}
 }
 
